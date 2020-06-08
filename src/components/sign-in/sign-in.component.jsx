@@ -23,7 +23,7 @@ class SignIn extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        this.state({email:'',password:''})
+        this.state = {email:'',password:''};
     }
 
     handleChange = event =>{
@@ -45,14 +45,14 @@ class SignIn extends React.Component {
                         handleChange={this.handleChange} 
                         value={this.state.email} 
                         label='Email'
-                        required />
+                         />
                     <FormInput 
                         name="password" 
                         type= 'password'
                         value={this.state.password} 
                         handleChange ={this.handleChange}
                         label = 'Password'
-                        required />
+                         />
                     <div className='buttons'>
                         
                     <CustomButton type="submit">Sign In </CustomButton>
