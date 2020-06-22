@@ -30,7 +30,7 @@ class App extends React.Component {
             });
         });
       }
-      setCurrentUser({ null })
+      setCurrentUser( userAuth )
 
     })
   }
