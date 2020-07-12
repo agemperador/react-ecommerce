@@ -10,7 +10,7 @@ import ShopPage from './pages/shop/shop.component'
 import Header from './components/header/header.component'
 import SignInUp from './pages/sign-in-up/sign-in-up.component'
 import CheckoutPage from './pages/checkout/checkout.component'
-
+import CoollectionPage from './pages/collection/collection.component'
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
