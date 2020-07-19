@@ -2,7 +2,7 @@ import firebase from 'firebase/app'
 
 import 'firebase/firestore';
 import 'firebase/auth'
-const aws = require('aws-sdk');
+
 
 
 const config = {
@@ -14,6 +14,7 @@ const config = {
     messagingSenderId: "423561943690",
     appId: process.env.FIREBASE_APP_ID
 };
+
 
 
 
