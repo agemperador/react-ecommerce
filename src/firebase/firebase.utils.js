@@ -6,13 +6,13 @@ import 'firebase/auth'
 
 
 const config = {
-    apiKey: process.env.FIREBASE_API_KEY,
+    apiKey: "process.env.FIREBASE_API_KEY",
     authDomain: "curso-ecommerce-react.firebaseapp.com",
     databaseURL: "https://curso-ecommerce-react.firebaseio.com",
     projectId: "curso-ecommerce-react",
     storageBucket: "curso-ecommerce-react.appspot.com",
     messagingSenderId: "423561943690",
-    appId: process.env.FIREBASE_APP_ID
+    appId: "process.env.FIREBASE_APP_ID"
 };
 
 
