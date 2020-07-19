@@ -15,6 +15,7 @@ const config = {
     appId: "process.env.FIREBASE_APP_ID"
 };
 
+console.log(process.env);
 
 
 
