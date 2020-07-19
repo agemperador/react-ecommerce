@@ -12,7 +12,7 @@ import SignInUp from './pages/sign-in-up/sign-in-up.component'
 import CheckoutPage from './pages/checkout/checkout.component'
 import CoollectionPage from './pages/collection/collection.component'
 
-//import { auth, createUserProfileDocument } from './firebase/firebase.utils.js';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
 
 import {selectCurrentUser} from './redux/user/user.selector'
@@ -21,7 +21,7 @@ import {selectCurrentUser} from './redux/user/user.selector'
 class App extends React.Component {
 
   unsuscribeFromAuth = null;
-/* 
+
   componentDidMount() {
 
     const {setCurrentUser} = this.props;
@@ -43,7 +43,6 @@ class App extends React.Component {
   componentWillUnmount() {
     this.unsuscribeFromAuth();
   }
- */  
   render() {
     return (
       <div>
@@ -51,14 +50,14 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
-          <Route exact path='/signin' render = { <SignInUp/>/* ()=>this.props.currentUser ? (<Redirect to='/'/>): (<SignInUp /> ) */}/>
+          <Route exact path='/signin' render = {()=>this.props.currentUser ? (<Redirect to='/'/>): (<SignInUp /> )}/>
           <Route exact path= '/checkout' component={CheckoutPage}/>
         </Switch>
       </div>
     );
   }
 }
-/* 
+
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
 })
@@ -73,6 +72,4 @@ const mapDispatchToProps = dispatch =>({
 export default connect(
   mapStateToProps, 
   mapDispatchToProps
-  )(App); */
-
-export default App;
+  )(App);

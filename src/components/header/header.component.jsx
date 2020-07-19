@@ -7,7 +7,7 @@ import {createStructuredSelector} from 'reselect'
 
 import {ReactComponent as Logo} from '../../assets/icon.svg'
 
-//import {auth} from '../../firebase/firebase.utils'
+import {auth} from '../../firebase/firebase.utils'
 
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import CartIcon from '../cart-icon/cart-icon.component.jsx'
