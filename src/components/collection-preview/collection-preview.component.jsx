@@ -2,11 +2,22 @@ import React from 'react';
 
 import CollectionItem from '../collection-item/collection-item.component'
 
+import {CollectionTitle} from  './collection-preview.styles'
+
+
+
 import './collection-preview.styles.scss';
 
-const CollectionsPreview = ({title, items}) =>(
+const CollectionsPreview = ({title, items}) =>{
+
+    console.log(title);
+    
+    return(
+
     <div className='collection-preview'>
-        <h1 className='title'>{title.toUpperCase()}</h1>
+        <CollectionTitle  to={`shop/${title.toLowerCase()}`} >
+            <h1>{title.toUpperCase()}</h1>
+        </CollectionTitle>
         <div className='preview'>
             {
                 items
@@ -19,5 +30,5 @@ const CollectionsPreview = ({title, items}) =>(
     </div>
 
 )
-
+}
 export default CollectionsPreview

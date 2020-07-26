@@ -10,11 +10,25 @@
         width: 70%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
         padding: 10px 20px;
+        text-align: center;
+        .price {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+        }
         .name {
             font-size: 16px;
+        }
+        .button {
+            margin: 0 10px 0 10px;
+            cursor: pointer;
+        }
+        .options {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
         }
     }
 }

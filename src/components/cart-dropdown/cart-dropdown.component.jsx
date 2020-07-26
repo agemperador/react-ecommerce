@@ -17,14 +17,17 @@ import "./cart-dropdown.styles.scss";
 
 const CartDropdown = ({ cartItems, history, dispatch }) => {
 
+    var total = 0;
     return (
     <div className="cart-dropdown">
         <div className="cart-items">
         {
         cartItems.length ? (       
-        cartItems.map((cartItem) => (
+        cartItems.map((cartItem) => {
+            total+=cartItem.quantity*cartItem.price
+            return (
             <CartItem key={cartItem.id} item={cartItem} />
-        ))
+        )})
         ):(
             <span className='empty-message'> Your cart is empty</span>
             
@@ -34,7 +37,7 @@ const CartDropdown = ({ cartItems, history, dispatch }) => {
             history.push('/checkout');
             dispatch(toggleCartHidden());
             }} >
-            GO TO CHECKOUT 
+            GO TO CHECKOUT   ${total}
         </CustomButton>
     </div>
 )};
