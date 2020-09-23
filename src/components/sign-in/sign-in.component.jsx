@@ -33,8 +33,6 @@ class SignIn extends React.Component {
         }catch(error){
             console.log(error);
         }
-
-       
     };
 
     handleChange = event =>{

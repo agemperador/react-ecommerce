@@ -11,7 +11,6 @@ import './collection.styles.scss'
 const CollectionPage = ({collection})=> {
 
     
-    console.log(collection);
     const {title,items} = collection;
     return(
     <div className='collection-page'>
@@ -26,10 +25,7 @@ const CollectionPage = ({collection})=> {
 )};
 
 
-const mapStateToProps = (state, ownProps) =>{
-    console.log(ownProps.match);
-    return({
-    collection: selectShopCollection(ownProps.match.params.collectionId)(state)
-})}
+const mapStateToProps = (state, ownProps) =>
+    {return {    collection: selectShopCollection(ownProps.match.params.collectionId)(state)}}
 
 export default  connect(mapStateToProps,null)(CollectionPage);
